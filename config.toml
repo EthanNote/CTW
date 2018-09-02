@@ -1,4 +1,4 @@
-baseurl = "ethannote.github.io/ctw" # Hostname (and path) to the root.
+baseurl = "https://ethannote.github.io/CTW" # Hostname (and path) to the root.
 title = "Code The World" # Site title.
 theme = "coder" # Set the theme.
 languagecode = "zh" # The site’s language code used to generate RSS.
