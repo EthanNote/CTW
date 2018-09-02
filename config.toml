@@ -18,7 +18,7 @@ pygmentscodefencesguesssyntax = true # Enable syntax guessing for code fences wi
     info = "His code is bullshit" # Author's job title or info.
     description = "Personal website" # Site description.
     keywords = "blog,developer,personal" # Site keywords.
-    avatarurl = "images/avatar.jpg" # Contain the path of the optionnal avatar in the static folder.
+    avatarurl = "/images/avatar.jpg" # Contain the path of the optionnal avatar in the static folder.
 
     footercontent = "God blame Xidian Univerisity." # Add footer content
 
@@ -48,8 +48,8 @@ pygmentscodefencesguesssyntax = true # Enable syntax guessing for code fences wi
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/posts/"
+    url  = "/CTW/posts/"
 [[menu.main]]
     name = "About"
     weight = 2
-    url = "/about/"
+    url = "/CTW/about/"
