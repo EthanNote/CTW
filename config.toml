@@ -1,0 +1,55 @@
+baseurl = "ethannote.github.io/ctw" # Hostname (and path) to the root.
+title = "Code The World" # Site title.
+theme = "coder" # Set the theme.
+languagecode = "zh" # The site’s language code used to generate RSS.
+defaultcontentlanguage = "zh" # The default content language.
+
+paginate = 20 # Default number of pages per page in pagination.
+canonifyurls = true # Enable to turn relative URLs into absolute.
+
+pygmentsstyle = "b2" # Color-theme or style for syntax highlighting.
+pygmentscodefences = true # Enable code fence background highlighting.
+pygmentscodefencesguesssyntax = true # Enable syntax guessing for code fences without specified language.
+
+#disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
+
+[params] # theme parameters
+    author = "EthanNote" # Author's name.
+    info = "His code is bullshit" # Author's job title or info.
+    description = "Personal website" # Site description.
+    keywords = "blog,developer,personal" # Site keywords.
+    avatarurl = "images/avatar.jpg" # Contain the path of the optionnal avatar in the static folder.
+
+    footercontent = "God blame Xidian Univerisity." # Add footer content
+
+    # Whether you want to hide copyright and credits in the footer.
+    hideCredits = false
+    hideCopyright = false
+
+    # to switch bewteen LTR and RTL layout
+    rtl = false
+
+    # Custom CSS
+    custom_css = []
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/EthanNote/"
+[[params.social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab fa-2x"
+    weight = 2
+    url = "https://gitlab.com/EthanNote/"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"

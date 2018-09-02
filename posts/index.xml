@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Code The World</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on Code The World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Sep 2018 17:43:33 +0800</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting start with Coder theme</title>
+      <link>//localhost:1313/posts/hugo_theme_coder/</link>
+      <pubDate>Sun, 02 Sep 2018 17:43:33 +0800</pubDate>
+      
+      <guid>//localhost:1313/posts/hugo_theme_coder/</guid>
+      <description>Coder主题十分简洁，基础功能健全，配置简单。
+主题仓库中附带配置文件，拿来即可用。
+问题及解决方法(Windows) Post列表日期错误，且无法显示各post标题 检查 meta 是否含有多余空格。slug 配置所在行末尾有空格，导致解析错误。如果完全不需要slug，可以直接在 archetypes/posts.md 中将其删除
+Hugo 版本不支持 x-scss 下载扩展板Hugo
+源代码语法高亮 (function(){ console.log(&amp;#34;Hello, world!&amp;#34;); }).();  English looks better The default language is English, and it looks much more comfortable. Maybe it is a good idea to leave the most content to programming code. And you can see this text has an equal-width font, quite similar to console output, which is another cause of Chinese-hostile.</description>
+    </item>
+    
+  </channel>
+</rss>
