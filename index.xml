@@ -6,10 +6,19 @@
     <description>Recent content on Code The World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 02 Sep 2018 17:43:33 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 00:25:28 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/CTW/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Three.js Learning Note</title>
+      <link>https://ethannote.github.io/CTW/posts/threejs/</link>
+      <pubDate>Tue, 04 Sep 2018 00:25:28 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/CTW/posts/threejs/</guid>
+      <description>Page &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;My first three.js app&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; body { margin: 0; } canvas { width: 100%; height: 100% } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script src=&amp;#34;js/three.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; // Our Javascript will go here. 	&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Scene var scene = new THREE.Scene(); var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 ); var renderer = new THREE.WebGLRenderer(); renderer.setSize( window.innerWidth, window.innerHeight ); document.body.appendChild( renderer.domElement ); var geometry = new THREE.</description>
+    </item>
     
     <item>
       <title>Getting start with Coder theme</title>
