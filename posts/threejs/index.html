@@ -70,9 +70,95 @@
   <section class="container post">
   <article>
     <header>
-      <h1 class="title">Three.js Learning Note</h1>
+      <link rel="stylesheet" href="//localhost:1313/CTW/script/highlight/styles/github.css">
+      <style>
+        pre {
+          position: relative;
+          margin-bottom: 24px;
+          border-radius: 3px;
+           
+          overflow: hidden;
+        }
+
+        c {
+          display: block;
+          padding: 12px 24px;
+          overflow-y: auto;
+           
+          font-size: 0.8em;
+        }
+
+        color: #000;.has-numbering {
+          margin-left: 21px;
+        }
+
+        .pre-numbering {
+          position: absolute;
+          top: 0;
+          left: -5px;
+          width: 20px;
+          padding: 12px 2px 30px 0;
+           
+          border-radius: 3px 0 0 3px;
+           
+          text-align: right;
+          font-family: Menlo, monospace;
+          font-size: 0.8em;
+           
+        }
+      </style>
+      <script src="//localhost:1313/CTW/script/highlight/highlight.pack.js"></script>
+      <script src="//localhost:1313/CTW/script/jquery/jquery-3.3.1.min.js"></script>
+      <script>
+        
+            
+          $(document).ready(function () {
+              $('pre c').each(function () {
+                var lines = $(this).text().split('\n').length - 1;
+                var $numbering = $('<ul/>').addClass('pre-numbering');
+                console.log($(this));
+                console.log("ready");
+                console.log($(this).text().split('\n'));
+                $(this)
+                  .addClass('has-numbering')
+                  .parent()
+                  .append($numbering);
+                for (i = 1; i <= lines; i++) {
+                  $numbering.append($('<li/>').text(i));
+                }
+              });
+            
+            $('pre c').each(function (i, block) {
+              hljs.highlightBlock(block);
+            });
+          });
+      </script>
+      <h1 class="title">Three.js Learning Note</h1> 
       <h2 class="date">September 4, 2018</h2>
 
+      
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [['$','$']],
+              displayMath: [['$$','$$']],
+              processEscapes: true,
+              processEnvironments: true,
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+              TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }
+            }
+          });
+          MathJax.Hub.Queue(function() {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+          });
+          </script>
       
     </header>
 

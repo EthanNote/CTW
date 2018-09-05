@@ -31,6 +31,22 @@ Coder主题十分简洁，基础功能健全，配置简单。
 }).();
 
 ```
+### 使用 highlightjs
+```html
+<pre><c>
+(function(){
+    console.log("Hello, world!");
+}).();
+</c></pre>
+```
+
+<pre><c>
+(function(){
+    console.log("Hello, world!");
+}).();
+</c></pre>
+
+
 
 ### English looks better
 
