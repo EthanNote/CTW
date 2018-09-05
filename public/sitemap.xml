@@ -3,39 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//localhost:1313/CTW/posts/r-b_tree/</loc>
-    <lastmod>2018-09-05T13:14:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//localhost:1313/CTW/posts/threejs/</loc>
+    <loc>https://ethannote.github.io/CTW/posts/threejs/</loc>
     <lastmod>2018-09-04T00:25:28+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//localhost:1313/CTW/posts/hugo_theme_coder/</loc>
+    <loc>https://ethannote.github.io/CTW/posts/hugo_theme_coder/</loc>
     <lastmod>2018-09-02T17:43:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//localhost:1313/CTW/categories/</loc>
+    <loc>https://ethannote.github.io/CTW/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//localhost:1313/CTW/</loc>
-    <lastmod>2018-09-05T13:14:01+08:00</lastmod>
+    <loc>https://ethannote.github.io/CTW/</loc>
+    <lastmod>2018-09-04T00:25:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//localhost:1313/CTW/posts/</loc>
-    <lastmod>2018-09-05T13:14:01+08:00</lastmod>
+    <loc>https://ethannote.github.io/CTW/posts/</loc>
+    <lastmod>2018-09-04T00:25:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//localhost:1313/CTW/tags/</loc>
+    <loc>https://ethannote.github.io/CTW/tags/</loc>
     <priority>0</priority>
   </url>
   

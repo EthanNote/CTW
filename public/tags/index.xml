@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Code The World</title>
-    <link>//localhost:1313/CTW/tags/</link>
+    <link>https://ethannote.github.io/CTW/tags/</link>
     <description>Recent content in Tags on Code The World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     
-	<atom:link href="//localhost:1313/CTW/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ethannote.github.io/CTW/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
