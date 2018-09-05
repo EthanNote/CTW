@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code The World</title>
-    <link>//localhost:1313/CTW/</link>
+    <link>https://ethannote.github.io/CTW/</link>
     <description>Recent content on Code The World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 05 Sep 2018 13:14:01 +0800</lastBuildDate>
     
-	<atom:link href="//localhost:1313/CTW/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ethannote.github.io/CTW/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R-B Tree</title>
-      <link>//localhost:1313/CTW/posts/r-b_tree/</link>
+      <link>https://ethannote.github.io/CTW/posts/r-b_tree/</link>
       <pubDate>Wed, 05 Sep 2018 13:14:01 +0800</pubDate>
       
-      <guid>//localhost:1313/CTW/posts/r-b_tree/</guid>
+      <guid>https://ethannote.github.io/CTW/posts/r-b_tree/</guid>
       <description>http://www.cnblogs.com/skywang12345/p/3245399.html
 简介 R-B Tree，全称是Red-Black Tree，又称为“红黑树”，它一种特殊的二叉查找树。红黑树的每个节点上都有存储位表示节点的颜色，可以是红(Red)或黑(Black)。
 红黑树的应用比较广泛，主要是用它来存储有序的数据，它的时间复杂度是O(lgn)，效率非常之高。 例如，Java集合中的TreeSet和TreeMap，C++ STL中的set、map，以及Linux虚拟内存的管理，都是通过红黑树去实现的。
@@ -27,19 +27,19 @@ RB-INSERT(T, z) y ← nil[T] // 新建节点“y”，将y设为空节点。 x �
     
     <item>
       <title>Three.js Learning Note</title>
-      <link>//localhost:1313/CTW/posts/threejs/</link>
+      <link>https://ethannote.github.io/CTW/posts/threejs/</link>
       <pubDate>Tue, 04 Sep 2018 00:25:28 +0800</pubDate>
       
-      <guid>//localhost:1313/CTW/posts/threejs/</guid>
+      <guid>https://ethannote.github.io/CTW/posts/threejs/</guid>
       <description>Page &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;My first three.js app&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; body { margin: 0; } canvas { width: 100%; height: 100% } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;script src=&amp;#34;js/three.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; // Our Javascript will go here. 	&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Scene var scene = new THREE.Scene(); var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 ); var renderer = new THREE.WebGLRenderer(); renderer.setSize( window.innerWidth, window.innerHeight ); document.body.appendChild( renderer.domElement ); var geometry = new THREE.</description>
     </item>
     
     <item>
       <title>Getting start with Coder theme</title>
-      <link>//localhost:1313/CTW/posts/hugo_theme_coder/</link>
+      <link>https://ethannote.github.io/CTW/posts/hugo_theme_coder/</link>
       <pubDate>Sun, 02 Sep 2018 17:43:33 +0800</pubDate>
       
-      <guid>//localhost:1313/CTW/posts/hugo_theme_coder/</guid>
+      <guid>https://ethannote.github.io/CTW/posts/hugo_theme_coder/</guid>
       <description>Coder主题十分简洁，基础功能健全，配置简单。
 主题仓库中附带配置文件，拿来即可用。
 问题及解决方法(Windows) Post列表日期错误，且无法显示各post标题 检查 meta 是否含有多余空格。slug 配置所在行末尾有空格，导致解析错误。如果完全不需要slug，可以直接在 archetypes/posts.md 中将其删除
