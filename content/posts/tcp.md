@@ -9,6 +9,11 @@ categories = []
 
 https://www.cnblogs.com/Andya/p/7272462.html
 
+### TCP 状态机
+
+![](/images/tcp/state.jpg)
+
+
 ### 三次握手过程
 
 ![](/images/tcp/1.png)
