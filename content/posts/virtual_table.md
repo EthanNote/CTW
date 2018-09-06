@@ -39,3 +39,5 @@ private:
     int m_data1, m_data4;
 };
 </c></pre>
+
+![](/images/virtual_table/memory.jpg)
