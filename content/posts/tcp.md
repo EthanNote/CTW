@@ -11,6 +11,7 @@ https://www.cnblogs.com/Andya/p/7272462.html
 
 ### TCP 状态机
 
+![](/images/tcp/state.png)
 ![](/images/tcp/state.jpg)
 
 
