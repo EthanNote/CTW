@@ -55,6 +55,10 @@
           </li>
         
           <li class="navigation-item">
+            <a class="navigation-link" href="https://ethannote.github.io/CTW/books/">Books</a>
+          </li>
+        
+          <li class="navigation-item">
             <a class="navigation-link" href="https://ethannote.github.io/CTW/about/">About</a>
           </li>
         
@@ -183,46 +187,51 @@
 	&lt;/<span style="font-weight:bold">body</span>&gt;
 &lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
 <h3 id="scene">Scene</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> scene = <span style="color:#fff;font-weight:bold">new</span> THREE.Scene();
-<span style="color:#fff;font-weight:bold">var</span> camera = <span style="color:#fff;font-weight:bold">new</span> THREE.PerspectiveCamera( <span style="color:#ff0;font-weight:bold">75</span>, <span style="color:#fff;font-weight:bold">window</span>.innerWidth<span style="color:#f00">/window.innerHeight, 0.1, 1000 );</span>
 
-<span style="color:#fff;font-weight:bold">var</span> renderer = <span style="color:#fff;font-weight:bold">new</span> THREE.WebGLRenderer();
-renderer.setSize( <span style="color:#fff;font-weight:bold">window</span>.innerWidth, <span style="color:#fff;font-weight:bold">window</span>.innerHeight );
-<span style="color:#fff;font-weight:bold">document</span>.body.appendChild( renderer.domElement );
+<pre><c>var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-<span style="color:#fff;font-weight:bold">var</span> geometry = <span style="color:#fff;font-weight:bold">new</span> THREE.BoxGeometry( <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">1</span> );
-<span style="color:#fff;font-weight:bold">var</span> material = <span style="color:#fff;font-weight:bold">new</span> THREE.MeshBasicMaterial( { color: <span style="color:#ff0;font-weight:bold">0x00ff00</span> } );
-<span style="color:#fff;font-weight:bold">var</span> cube = <span style="color:#fff;font-weight:bold">new</span> THREE.Mesh( geometry, material );
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
-camera.position.z = <span style="color:#ff0;font-weight:bold">5</span>;
+camera.position.z = 5;
 
-<span style="color:#fff;font-weight:bold">var</span> animate = <span style="color:#fff;font-weight:bold">function</span> () {
-	requestAnimationFrame( animate );
+var animate = function () {
+    requestAnimationFrame( animate );
 
-	cube.rotation.x += <span style="color:#ff0;font-weight:bold">0.01</span>;
-	cube.rotation.y += <span style="color:#ff0;font-weight:bold">0.01</span>;
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
 
-	renderer.render( scene, camera );
+    renderer.render( scene, camera );
 };
 
 animate();
-</code></pre></div>
+</c></pre>
+
 <h3 id="geometry">Geometry</h3>
 
 <p><a href="https://threejs.org/docs/index.html#api/en/core/Geometry">https://threejs.org/docs/index.html#api/en/core/Geometry</a></p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#fff;font-weight:bold">var</span> geometry = <span style="color:#fff;font-weight:bold">new</span> THREE.Geometry();
+
+<pre><c>
+var geometry = new THREE.Geometry();
 
 geometry.vertices.push(
-	<span style="color:#fff;font-weight:bold">new</span> THREE.Vector3( -<span style="color:#ff0;font-weight:bold">10</span>,  <span style="color:#ff0;font-weight:bold">10</span>, <span style="color:#ff0;font-weight:bold">0</span> ),
-	<span style="color:#fff;font-weight:bold">new</span> THREE.Vector3( -<span style="color:#ff0;font-weight:bold">10</span>, -<span style="color:#ff0;font-weight:bold">10</span>, <span style="color:#ff0;font-weight:bold">0</span> ),
-	<span style="color:#fff;font-weight:bold">new</span> THREE.Vector3(  <span style="color:#ff0;font-weight:bold">10</span>, -<span style="color:#ff0;font-weight:bold">10</span>, <span style="color:#ff0;font-weight:bold">0</span> )
+    new THREE.Vector3( -10,  10, 0 ),
+    new THREE.Vector3( -10, -10, 0 ),
+    new THREE.Vector3(  10, -10, 0 )
 );
 
-geometry.faces.push( <span style="color:#fff;font-weight:bold">new</span> THREE.Face3( <span style="color:#ff0;font-weight:bold">0</span>, <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span> ) );
+geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
 
 geometry.computeBoundingSphere();
-</code></pre></div>
+</c></pre>
+
   </article>
 
   <br/>

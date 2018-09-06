@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Code The World</title>
+    <link>https://ethannote.github.io/CTW/books/</link>
+    <description>Recent content in Books on Code The World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 06 Sep 2018 12:38:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://ethannote.github.io/CTW/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://ethannote.github.io/CTW/books/c&#43;&#43;/</link>
+      <pubDate>Thu, 06 Sep 2018 12:38:10 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/CTW/books/c&#43;&#43;/</guid>
+      <description>《深入理解 C++ 对象模型》</description>
+    </item>
+    
+  </channel>
+</rss>

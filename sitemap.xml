@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ethannote.github.io/CTW/books/c&#43;&#43;/</loc>
+    <lastmod>2018-09-06T12:38:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ethannote.github.io/CTW/posts/virtual_table/</loc>
+    <lastmod>2018-09-06T12:27:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ethannote.github.io/CTW/posts/tcp/</loc>
     <lastmod>2018-09-05T22:21:16+08:00</lastmod>
   </url>
@@ -23,19 +33,25 @@
   </url>
   
   <url>
+    <loc>https://ethannote.github.io/CTW/books/</loc>
+    <lastmod>2018-09-06T12:38:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ethannote.github.io/CTW/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ethannote.github.io/CTW/</loc>
-    <lastmod>2018-09-05T22:21:16+08:00</lastmod>
+    <lastmod>2018-09-06T12:38:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ethannote.github.io/CTW/posts/</loc>
-    <lastmod>2018-09-05T22:21:16+08:00</lastmod>
+    <lastmod>2018-09-06T12:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
