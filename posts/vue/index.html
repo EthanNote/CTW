@@ -11,10 +11,10 @@
 
     <base href="https://ethannote.github.io/CTW">
     <title>
-  Three.js Learning Note · Code The World
+  Vue · Code The World
 </title>
 
-    <link rel="canonical" href="https://ethannote.github.io/CTW/posts/threejs/">
+    <link rel="canonical" href="https://ethannote.github.io/CTW/posts/vue/">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
@@ -141,8 +141,8 @@
             });
           });
       </script>
-      <h1 class="title">Three.js Learning Note</h1> 
-      <h2 class="date">September 4, 2018</h2>
+      <h1 class="title">Vue</h1> 
+      <h2 class="date">September 11, 2018</h2>
 
       
         <script type="text/javascript" async
@@ -172,68 +172,43 @@
 
     
 
-<h3 id="page">Page</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="font-weight:bold">html</span>&gt;
-	&lt;<span style="font-weight:bold">head</span>&gt;
-		&lt;<span style="font-weight:bold">meta</span> <span style="color:#007f7f">charset</span>=<span style="color:#0ff;font-weight:bold">utf-8</span>&gt;
-		&lt;<span style="font-weight:bold">title</span>&gt;My first three.js app&lt;/<span style="font-weight:bold">title</span>&gt;
-		&lt;<span style="font-weight:bold">style</span>&gt;
-			<span style="font-weight:bold">body</span> { <span style="color:#fff;font-weight:bold">margin</span>: <span style="color:#ff0;font-weight:bold">0</span>; }
-			<span style="font-weight:bold">canvas</span> { <span style="color:#fff;font-weight:bold">width</span>: <span style="color:#ff0;font-weight:bold">100</span><span style="color:#fff;font-weight:bold">%</span>; <span style="color:#fff;font-weight:bold">height</span>: <span style="color:#ff0;font-weight:bold">100</span><span style="color:#fff;font-weight:bold">%</span> }
-		&lt;/<span style="font-weight:bold">style</span>&gt;
-	&lt;/<span style="font-weight:bold">head</span>&gt;
-	&lt;<span style="font-weight:bold">body</span>&gt;
-		&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;js/three.js&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
-		&lt;<span style="font-weight:bold">script</span>&gt;
-			<span style="color:#007f7f">// Our Javascript will go here.
-</span><span style="color:#007f7f"></span>		&lt;/<span style="font-weight:bold">script</span>&gt;
-	&lt;/<span style="font-weight:bold">body</span>&gt;
-&lt;/<span style="font-weight:bold">html</span>&gt;</code></pre></div>
-<h3 id="scene">Scene</h3>
+<h3 id="数据绑定-计算属性">数据绑定、计算属性</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;div id=&#34;post_display&#34;&gt;
+  &lt;div class=&#34;img_line&#34; v-for=&#34;postRow in postRows&#34;&gt;
+    &lt;div class=&#34;img_frame&#34; v-bind:style=&#34;frameStyle&#34; v-for=&#34;post in postRow&#34;&gt;
+      &lt;img v-bind:src=&#34;post.sample_url&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+<p>v-bind:style 数据绑定为计算属性时，计算属性函数的返回值为Object，采用Object的 key value 表示 style。而不能返回style 字符串。</p>
 
-<pre><c>var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+<pre><c>var vm = new Vue({
+      el: "#post_display",
+      data: {
+        posts: [],
+        rows: 4,
+      },
+      computed: {
+        postRows: function () {
+          var result = [];
+          var i = 0;
+          while (1) {
+            var nextLine = this.posts.slice(this.rows * i, this.rows * (i + 1));
+            if (nextLine.length <= 0) {
+              break;
+            }
+            result.push(nextLine);
+            i++;
+          }
+          return result;
+        },
 
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+        frameStyle: function () {
+          return { width: `${100 / this.rows}%` }
+        }
 
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
-camera.position.z = 5;
-
-var animate = function () {
-    requestAnimationFrame( animate );
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    renderer.render( scene, camera );
-};
-
-animate();
-</c></pre>
-
-<h3 id="geometry">Geometry</h3>
-
-<p><a href="https://threejs.org/docs/index.html#api/en/core/Geometry">https://threejs.org/docs/index.html#api/en/core/Geometry</a></p>
-
-<pre><c>
-var geometry = new THREE.Geometry();
-
-geometry.vertices.push(
-    new THREE.Vector3( -10,  10, 0 ),
-    new THREE.Vector3( -10, -10, 0 ),
-    new THREE.Vector3(  10, -10, 0 )
-);
-
-geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
-
-geometry.computeBoundingSphere();
+      }
+    })
 </c></pre>
 
   </article>
