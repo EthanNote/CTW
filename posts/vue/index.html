@@ -85,7 +85,7 @@
           background: #282a36;
         }
 
-        c {
+        c, ch {
           display: block;
           padding: 12px 24px;
           padding-left: 1rem !important;    
@@ -118,105 +118,166 @@
       <script src="https://ethannote.github.io/CTW/script/highlight/highlight.pack.js"></script>
       <script src="https://ethannote.github.io/CTW/script/jquery/jquery-3.3.1.min.js"></script>
       <script>
-        
-            
-          $(document).ready(function () {
-              $('pre c').each(function () {
-                var lines = $(this).text().split('\n').length - 1;
-                var $numbering = $('<ul/>').addClass('pre-numbering');
-                console.log($(this));
-                console.log("ready");
-                console.log($(this).text().split('\n'));
-                $(this)
-                  .addClass('has-numbering')
-                  .parent()
-                  .append($numbering);
-                for (i = 1; i <= lines; i++) {
-                  $numbering.append($('<li/>').text(i));
-                }
-              });
-            
-            $('pre c').each(function (i, block) {
-              hljs.highlightBlock(block);
-            });
+
+        var format = function () {
+          var lines = $(this).text().split('\n').length;
+          var $numbering = $('<ul/>').addClass('pre-numbering');
+          console.log($(this));
+          console.log("ready");
+          console.log($(this).text().split('\n'));
+          $(this)
+            .addClass('has-numbering')
+            .parent()
+            .append($numbering);
+          for (i = 1; i <= lines; i++) {
+            $numbering.append($('<li/>').text(i));
+          }
+        }
+
+        $(document).ready(function () {
+          $('pre ch').each(function(){ this.innerText = this.innerHTML.trim(); console.log(this) });
+          $('pre ch').each(format);
+          $('pre c').each(function(){this.innerText=this.innerText.trim()});
+          $('pre c').each(format);
+          
+          $('pre c').each(function (i, block) {
+            hljs.highlightBlock(block);
           });
+          $('pre ch').each(function (i, block) {
+            hljs.highlightBlock(block);
+          });
+        });
       </script>
-      <h1 class="title">Vue</h1> 
+      <h1 class="title">Vue</h1>
       <h2 class="date">September 11, 2018</h2>
 
-      
-        <script type="text/javascript" async
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
-          MathJax.Hub.Config({
-            tex2jax: {
-              inlineMath: [['$','$']],
-              displayMath: [['$$','$$']],
-              processEscapes: true,
-              processEnvironments: true,
-              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-              TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }
-            }
-          });
-          MathJax.Hub.Queue(function() {
-            
-            
-            
-            var all = MathJax.Hub.getAllJax(), i;
-            for(i = 0; i < all.length; i += 1) {
-                all[i].SourceElement().parentNode.className += ' has-jax';
-            }
-          });
-          </script>
-      
+
+      <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        MathJax.Hub.Queue(function () {
+          
+          
+          
+          var all = MathJax.Hub.getAllJax(), i;
+          for (i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+        });
+      </script>
+
     </header>
 
     
 
 <h3 id="数据绑定-计算属性">数据绑定、计算属性</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;div id=&#34;post_display&#34;&gt;
-  &lt;div class=&#34;img_line&#34; v-for=&#34;postRow in postRows&#34;&gt;
-    &lt;div class=&#34;img_frame&#34; v-bind:style=&#34;frameStyle&#34; v-for=&#34;post in postRow&#34;&gt;
-      &lt;img v-bind:src=&#34;post.sample_url&#34;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre></div>
+
+<pre><ch>
+<div id="post_display">
+  <div class="img_line" v-for="postRow in postRows">
+    <div class="img_frame" v-bind:style="frameStyle" v-for="post in postRow">
+      <img v-bind:src="post.sample_url">
+    </div>
+  </div>
+</div>
+</ch></pre>
+
 <p>v-bind:style 数据绑定为计算属性时，计算属性函数的返回值为Object，采用Object的 key value 表示 style。而不能返回style 字符串。</p>
 
-<pre><c>var vm = new Vue({
-      el: "#post_display",
-      data: {
-        posts: [],
-        rows: 4,
-      },
-      computed: {
-        postRows: function () {
-          var result = [];
-          var i = 0;
-          while (1) {
-            var nextLine = this.posts.slice(this.rows * i, this.rows * (i + 1));
-            if (nextLine.length <= 0) {
-              break;
-            }
-            result.push(nextLine);
-            i++;
-          }
-          return result;
-        },
-
-        frameStyle: function () {
-          return { width: `${100 / this.rows}%` }
+<pre><c>
+var vm = new Vue({
+  el: "#post_display",
+  data: {
+    posts: [],
+    rows: 4,
+  },
+  computed: {
+    postRows: function () {
+      var result = [];
+      var i = 0;
+      while (1) {
+        var nextLine = this.posts.slice(this.rows * i, this.rows * (i + 1));
+        if (nextLine.length <= 0) {
+          break;
         }
+        result.push(nextLine);
+        i++;
+      }
+      return result;
+    },
+
+    frameStyle: function () {
+      return { width: `${100 / this.rows}%` }
+    }
+
+  }
+})
+</c></pre>
+
+<h3 id="方法">方法</h3>
+
+<pre><ch class="html">
+<div class="img_frame" v-bind:style="frameStyle" v-for="post in postRow">
+  <img class="post_img" v-bind:src="post.preview_url" 
+
+  onerror="javascript:reload(this)" 
+
+  v-on:click="viewBigImage(post)">
+</div>
+</ch></pre>
+
+<pre><c>
+const vm = new Vue({
+  el: "#post_display",
+  data: {
+    curPost: {
+      file_url: "",
+      id: -1,
+      author: "null",
+      tags: ""
+    },
+  },
+  methods: {
+    viewBigImage: function (post) {
+      if (post) {
+        document.getElementById('big_image_background').style.backgroundImage = `url(${post.preview_url})`;
+        document.getElementById('big_image').src = post.file_url;
+        document.getElementById('big_view').hidden = false;
+        this.curPost = post;
+        document.body.style.overflowY = "hidden";
 
       }
-    })
+      else {
+        document.body.style.overflowY = "unset";
+        document.getElementById('big_view').hidden = true;
+      }
+      console.log(post);
+    }
+  }
+}
 </c></pre>
+
+<h3 id="使用-dom-api-而不使用数据绑定的情况">使用 DOM API 而不使用数据绑定的情况</h3>
+
+<ul>
+<li>页面需要立即更新</li>
+<li>操作不复杂</li>
+</ul>
 
   </article>
 
-  <br/>
+  <br />
 
   
-  
+
 </section>
 
       </div>

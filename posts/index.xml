@@ -17,8 +17,8 @@
       <pubDate>Tue, 11 Sep 2018 00:55:08 +0800</pubDate>
       
       <guid>https://ethannote.github.io/CTW/posts/vue/</guid>
-      <description>数据绑定、计算属性 &amp;lt;div id=&amp;#34;post_display&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;img_line&amp;#34; v-for=&amp;#34;postRow in postRows&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;img_frame&amp;#34; v-bind:style=&amp;#34;frameStyle&amp;#34; v-for=&amp;#34;post in postRow&amp;#34;&amp;gt; &amp;lt;img v-bind:src=&amp;#34;post.sample_url&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; v-bind:style 数据绑定为计算属性时，计算属性函数的返回值为Object，采用Object的 key value 表示 style。而不能返回style 字符串。
-var vm = new Vue({ el: &#34;#post_display&#34;, data: { posts: [], rows: 4, }, computed: { postRows: function () { var result = []; var i = 0; while (1) { var nextLine = this.posts.slice(this.rows * i, this.rows * (i + 1)); if (nextLine.</description>
+      <description>数据绑定、计算属性      v-bind:style 数据绑定为计算属性时，计算属性函数的返回值为Object，采用Object的 key value 表示 style。而不能返回style 字符串。
+ var vm = new Vue({ el: &#34;#post_display&#34;, data: { posts: [], rows: 4, }, computed: { postRows: function () { var result = []; var i = 0; while (1) { var nextLine = this.posts.slice(this.rows * i, this.rows * (i + 1)); if (nextLine.length  方法    const vm = new Vue({ el: &#34;</description>
     </item>
     
     <item>
