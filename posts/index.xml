@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Code The World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Sep 2018 00:55:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Sep 2018 18:09:31 +0800</lastBuildDate>
     
 	<atom:link href="https://ethannote.github.io/CTW/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XML Http Request</title>
+      <link>https://ethannote.github.io/CTW/posts/xml-http-request/</link>
+      <pubDate>Fri, 21 Sep 2018 18:09:31 +0800</pubDate>
+      
+      <guid>https://ethannote.github.io/CTW/posts/xml-http-request/</guid>
+      <description> Loading progress Using &amp;lsquo;onprogress&amp;rsquo; callback
+https://www.cnblogs.com/gaohj/p/7017722.html
+   var xhr = createXHR(); xhr.onload = function(event){ if((xhr.status = 200 &amp;&amp; xhr.status up   </description>
+    </item>
     
     <item>
       <title>Vue</title>

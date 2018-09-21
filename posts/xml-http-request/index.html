@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="EthanNote">
+    <meta name="description" content="Personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ethannote.github.io/CTW">
+    <title>
+  XML Http Request · Code The World
+</title>
+
+    <link rel="canonical" href="https://ethannote.github.io/CTW/posts/xml-http-request/">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://ethannote.github.io/CTW/css/coder.css" integrity="" media="screen">
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://ethannote.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ethannote.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.48" />
+  </head>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ethannote.github.io/CTW">
+      Code The World
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://ethannote.github.io/CTW/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://ethannote.github.io/CTW/books/">Books</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://ethannote.github.io/CTW/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <link rel="stylesheet" href="https://ethannote.github.io/CTW/script/highlight/styles/dracula.css">
+      <style>
+        pre {
+          position: relative;
+          margin-bottom: 24px;
+          border-radius: 3px;
+           
+          overflow: hidden;
+          background: #282a36;
+        }
+
+        c, ch {
+          display: block;
+          padding: 12px 24px;
+          padding-left: 1rem !important;    
+          overflow-y: auto;
+           
+           
+          font: normal 1em Consolas, Monaco, monospace;
+        }
+
+        color: #000;.has-numbering {
+          margin-left: 21px;
+        }
+
+        .pre-numbering {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 35px;
+          padding: 12px 2px 30px 0;
+           
+          border-radius: 3px 0 0 3px;
+           
+          text-align: right;
+           
+          font: normal 1em Consolas, Monaco, monospace;
+          color: gray;
+           
+        }
+      </style>
+      <script src="https://ethannote.github.io/CTW/script/highlight/highlight.pack.js"></script>
+      <script src="https://ethannote.github.io/CTW/script/jquery/jquery-3.3.1.min.js"></script>
+      <script>
+
+        var format = function () {
+          var lines = $(this).text().split('\n').length;
+          var $numbering = $('<ul/>').addClass('pre-numbering');
+          console.log($(this));
+          console.log("ready");
+          console.log($(this).text().split('\n'));
+          $(this)
+            .addClass('has-numbering')
+            .parent()
+            .append($numbering);
+          for (i = 1; i <= lines; i++) {
+            $numbering.append($('<li/>').text(i));
+          }
+        }
+
+        $(document).ready(function () {
+          $('pre ch').each(function(){ this.innerText = this.innerHTML.trim(); console.log(this) });
+          $('pre ch').each(format);
+          $('pre c').each(function(){this.innerText=this.innerText.trim()});
+          $('pre c').each(format);
+          
+          $('pre c').each(function (i, block) {
+            hljs.highlightBlock(block);
+          });
+          $('pre ch').each(function (i, block) {
+            hljs.highlightBlock(block);
+          });
+        });
+      </script>
+      <h1 class="title">XML Http Request</h1>
+      <h2 class="date">September 21, 2018</h2>
+
+
+      <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        MathJax.Hub.Queue(function () {
+          
+          
+          
+          var all = MathJax.Hub.getAllJax(), i;
+          for (i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+        });
+      </script>
+
+    </header>
+
+    
+
+<h3 id="loading-progress">Loading progress</h3>
+
+<p>Using &lsquo;onprogress&rsquo; callback</p>
+
+<p><a href="https://www.cnblogs.com/gaohj/p/7017722.html">https://www.cnblogs.com/gaohj/p/7017722.html</a></p>
+
+<pre><ch>
+
+<script src="http://file.leeye.net/jquery.js"></script>  
+<script>  
+
+var xhr = createXHR();  
+xhr.onload = function(event){  
+    if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){  
+        //alert(xhr.responseText);  
+    }else{  
+        //alert('Request was unsuccessful: '+ xhr.status);  
+    }  
+}  
+
+xhr.onprogress = function(event){  
+    var progress = '';  
+    var divStauts = document.getElementById("status");  
+    console.log(event);  
+    if(event.lengthComputable){  
+        progress = ""+Math.round(100*event.loaded/event.total)+"%";  
+        divStauts.innerHTML = "Recevied " + progress + " of " + event.total + "bytes";  
+    }  
+}  
+
+function createXHR(){  
+    var xhr = null;  
+    try {  
+        // Firefox, Opera 8.0+, Safari，IE7+  
+        xhr = new XMLHttpRequest();  
+    }  
+    catch (e) {  
+        // Internet Explorer   
+        try {  
+            xhr = new ActiveXObject("Msxml2.XMLHTTP");  
+        }  
+        catch (e) {  
+            try {  
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");  
+            }  
+            catch (e) {  
+                xhr = null;  
+            }  
+        }  
+    }  
+    return xhr;  
+} 
+
+function upload(){  
+    url = 'http://file.leeye.net/test.jpg'  
+    xhr.open('get', url, true);  
+    xhr.send(null);  
+    $('img').attr('src' , url).show();  
+}  
+
+</script>  
+<button>up</button>  
+<div id="status"></div>  
+<img style="display: none;">
+
+</ch></pre>
+
+  </article>
+
+  <br />
+
+  
+
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>God blame Xidian Univerisity.</p>
+    
+     © 2018    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
