@@ -19,3 +19,16 @@ it will hold; and then every time you want to use it, and it’s not currently
 bound. 
 
 **OpenGL Programming Guide,Eighth Edition**  p18
+
+
+## Shader version
+
+> The
+naming scheme of GLSL versions based on OpenGL versions works back to
+Version 3.3. 
+
+> Every shader should
+have a ‘‘#version’’ line at its start, otherwise version ‘‘110’’ is assumed,
+which is incompatible with OpenGL’s core profile versions. 
+
+**OpenGL Programming Guide,Eighth Edition**  p23
