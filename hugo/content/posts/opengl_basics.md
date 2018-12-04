@@ -9,3 +9,13 @@ while fragment shading uses that information to determine what color
 that fragment will be.
 
 **OpenGL Programming Guide,Eighth Edition**  p13
+
+
+## Bind & edit approach
+
+> Generally speaking, you will bind
+an object in two situations: initially when you create and initialize the data
+it will hold; and then every time you want to use it, and it’s not currently
+bound. 
+
+**OpenGL Programming Guide,Eighth Edition**  p18
